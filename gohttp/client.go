@@ -1,14 +1,29 @@
 package gohttp
 
-type HttpClient struct {
+type httpClient struct {
+
+func New() HttpClient {
+									
+		client := &httpClient{}
+		return client
 }
 
-func Get() {}
+	type HttpClient interface {
+		Get()
+		Post()
+		Put()
+		Patch()
+		Delete()
+	
+}
 
-func Post() {}
+func (c *HttpClient) Get() {}
 
-func Putt() {}
+func (c *HttpClient) Post() {}
 
-func Patch() {}
+func (c *HttpClient) Putt() {}
 
-func Delete() {}
+func (c *HttpClient) Patch() {}
+
+func (c *HttpClient) Delete() {}
+

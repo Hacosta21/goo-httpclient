@@ -1,14 +1,12 @@
-package go_httpclient
+package gohttp
 
 import (
 	"github.com/Hacosta21/goo-httpclient/gohttp"
 )
 
-
-
 func exampleUsage() {
-	client := gohttp.HttpClient{}
+	client := gohttp.New()
 
-	gohttp.
+	client.Get()
 
 }
